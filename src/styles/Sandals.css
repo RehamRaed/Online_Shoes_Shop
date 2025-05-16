@@ -1,0 +1,77 @@
+.sandal_page{
+    padding-top: 9rem;
+    padding-bottom: 4rem;
+
+}
+.breadcrumb-link {
+    text-decoration: none !important;
+  }
+.home-word {
+    color: #959595;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+  }
+  .breadcrumb-current {
+    color: #474747;
+    font-weight: bold;
+    font-size: 15px;
+    padding-top: 2px;
+  }
+  .breadcrumb-separator {
+    margin: 0 4px;
+    color: #888;
+    padding-top: 1px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .Featured{
+      background-color: #333 !important;
+  }
+.sort_btn {
+    color: #333 !important;
+    border: 1px solid #ccc;
+    padding: 3px 8px !important;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+  }
+  
+ 
+  .custom-alert {
+    position: fixed;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff3c9;
+    color: rgb(173, 8, 13); 
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: top 0.5s ease, opacity 0.5s ease; 
+    z-index: 9999;
+  }
+  
+  .custom-alert.show {
+    top: 20px; 
+    opacity: 1; 
+  }
+  .add_btn{
+    padding: 0.8rem 2.5rem !important;
+    color: rgb(255, 255, 255) !important;
+    font-size: 16px;
+    font-weight: 600 !important;
+    box-shadow: 0 0.2rem 0.5rem rgb(98, 98, 98);
+    background-color: var(--primary-color)!important ;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  }
+  
+  .add_btn:hover {
+    transform: scale(1.03); 
+    box-shadow: 0 0.8rem 1.5rem rgba(128, 128, 128, 0.7);
+  }

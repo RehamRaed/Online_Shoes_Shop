@@ -1,0 +1,103 @@
+#hero_section {
+    background-image: url("../../src/assest/uottetbx.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: rgb(124, 25, 48) !important;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    color: #fff;
+    position: relative;
+    animation: backgroundZoom 6s ease-in-out infinite;
+    background-repeat: no-repeat; 
+}
+
+@keyframes backgroundZoom {
+    0% {
+        background-size: 100%;
+    }
+    50% {
+        background-size: 103%;
+    }
+    100% {
+        background-size: 100%;
+    }
+}
+
+
+  #hero_section::before {
+    content: "";
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  #hero_section .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .title {
+    margin-bottom: 200px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  
+  .title span {
+    font-size: 5rem;
+    font-weight: 700;
+    color: #ffd700;
+  }
+  
+  p {
+    padding-top: 20px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #f1f1f1;
+  }
+  
+  .custom-btn {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    z-index: 3;
+  }
+  
+  .custom-btn:hover {
+    background-color: #fff;
+    color: #000;
+  }
+  .btn{
+    background-color: transparent!important;
+  }
+  .mt-4 {
+  margin-top: 1.5rem !important;
+  color: #c6bfbf !important;
+  }
+ @media (max-width: 1195px) {
+  #hero_section {
+    animation: none;
+    background-size: cover;
+    background-position: 5% center;
+  }
+
+}
+@media (max-width: 484px) {
+    .title {
+    font-size: 2rem;
+  
+  }
+  .title span {
+    font-size: 4rem;
+   
+  }
+}

@@ -1,0 +1,77 @@
+
+#contact_section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #222;
+  }
+  
+  #contact_section h4 {
+    color: #333;
+  }
+  
+  #contact_section .bi {
+    color: #000000; 
+  }
+
+
+  .leaflet-container {
+    z-index: 1 !important;
+  }
+ 
+  .custom-form-group label {
+    margin-bottom: 6px;
+    display: block;
+  }
+  
+  .custom-input::placeholder {
+    font-size: 0.875rem; 
+    color: #bbb;        
+  }
+  
+  .custom-input {
+    border-color: #ddd;
+    transition: border-color 0.3s ease;
+  }
+  
+  .custom-input:focus,
+  .custom-input:hover {
+    border-color: #000;
+    box-shadow: none !important;
+  }
+ 
+  .send-msg{
+  padding: 0.8rem 2.5rem !important;
+  color: rgb(255, 255, 255) !important;
+  font-size: 16px;
+  font-weight: 600 !important;
+  background-color:var(--primary-color)!important ;
+  cursor: pointer;
+  margin: 0!important;
+  border-radius: 25px;
+  border: none;
+}
+
+.send-msg:hover{
+  transform: scale(1.03); 
+  box-shadow: 0 0rem 1.5rem rgba(128, 128, 128, 0.7); 
+}
+.fs-3{
+  color: var(--primary-color)!important;
+}
+@media (max-width: 992px) {
+ .form-control {
+  width: 80%;
+  margin: 0 auto;
+ } 
+ .f-column{
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+ }
+ .custom-form-group label {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 80%;
+  }
+}

@@ -1,0 +1,138 @@
+.testimonials-section {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+  }
+  
+  .testimonial-card {
+    position: relative;
+    background: white;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 750px;
+    min-height: 300px;
+    margin: 0 auto;
+  }
+  .test{
+   font-size: 2.5rem;
+    font-weight: 700;
+    color: #222;
+  }
+   
+  .testimonial-card .name {
+    font-size:1.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .testimonial-card .title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #999;
+    margin-bottom: 15px;
+  }
+  
+  .testimonial-card .testimonial-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #444;
+  }
+  
+  .position{
+    color: #787777;
+    padding-top: 10px!important;
+  }
+  
+  .carousel-item {
+    position: relative;
+  }
+  .carousel-control-prev,
+.carousel-control-next {
+  width: 50px;
+  height: 60%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(130, 66, 87, 0.503);
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-control-prev {
+  left: calc(50% - 425px); 
+  border-radius: 5px 0 0 5px;
+}
+
+.carousel-control-next {
+  right: calc(50% - 425px); 
+  border-radius: 0 5px 5px 0;
+}
+
+
+
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-size: 30px 30px;
+  }
+ 
+    @media (max-width: 868px) {
+      .testimonial-card {
+        max-width: 80%;
+        padding: 20px;
+      }
+    
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: 50px;
+        height: 50%;
+      }
+    
+      .carousel-control-prev {
+        left: 16px;
+      }
+    
+      .carousel-control-next {
+        right: 15px;
+      }
+    }
+    @media (max-width: 767px) {
+      .testimonial-card {
+        max-width: 80%;
+        padding: 20px;
+      }
+      .carousel-control-prev {
+        left: 1px;
+      }
+    
+      .carousel-control-next {
+        right: 1px;
+      }
+    }
+    @media (max-width: 576px) {
+      .testimonial-card {
+        max-width: 70%;
+        
+        margin: 0 auto;
+        box-sizing: border-box;
+      }
+    
+      
+    
+      .carousel-control-prev,
+      .carousel-control-next {
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 60px;
+      }
+    
+      .carousel-control-prev {
+        left: 10px;
+      }
+    
+      .carousel-control-next {
+        right: 10px;
+      }
+    }
