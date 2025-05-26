@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useCart } from "../../../src/Context/CartContext";
@@ -19,7 +18,7 @@ function Sandals() {
     {
       id: 1,
       name: 'Whisper',
-      price: '40$',
+      price: 40,
       image: sandal1,
       colors: ['red', 'blue', 'black', 'brown', 'purple'],
       sizes: [38, 39, 40, 41, 42],
@@ -29,7 +28,7 @@ function Sandals() {
     {
       id: 2,
       name: 'Graceful Steps',
-      price: '35$',
+      price: 35,
       image: sandal2,
       colors: ['green', 'purple', 'pink2'],
       sizes: [36, 37, 38, 39],
@@ -39,7 +38,7 @@ function Sandals() {
     {
       id: 3,
       name: 'Summer Breeze',
-      price: '$59',
+      price: 59,
       image: sandal3,
       colors: ['green2'],
       sizes: [40, 41, 42, 43],
@@ -49,7 +48,7 @@ function Sandals() {
     {
       id: 4,
       name: 'Just a Girl Sandal',
-      price: '40$',
+      price: 40,
       image: sandal4,
       colors: ['orange', 'pink', 'green'],
       sizes: [39, 40, 41, 42, 43],
@@ -59,7 +58,7 @@ function Sandals() {
     {
       id: 5,
       name: 'Poise Sandal',
-      price: '$40',
+      price: 40,
       image: sandal5,
       colors: ['brown'],
       sizes: [38, 39, 40],
@@ -69,36 +68,33 @@ function Sandals() {
     {
       id: 6,
       name: 'Flutterfly',
-      price: '50$',
+      price: 50,
       image: sandal6,
       colors: ['brown', 'blue'],
       sizes: [36, 37, 38, 39, 40],
       availableSizes: [36, 37, 38, 39, 40],
       bestSeller: true,
     },
-    ,
-  {
-    id: 7,
-    name: "Luma Sandal",
-    price: "39$",
-    image: product3,
-    colors: ["pink", "gray", "beige", "white", "black"],
-    sizes: [36, 37, 38, 39, 40, 41],
-    availableSizes: [36],
-    isNew: true
-  }
-  ,
-  {
-    id: 8,
-    name: "Veloura Pumps",
-    price: "45$",
-    image: product5,
-    colors: ["black", "brown", "gray"],
-    sizes: [36, 37, 38, 39, 40, 41],
-    availableSizes: [38, 39],
-    isNew: true
-
-  }
+    {
+      id: 7,
+      name: "Luma Sandal",
+      price: 39,
+      image: product3,
+      colors: ["pink", "gray", "beige", "white", "black"],
+      sizes: [36, 37, 38, 39, 40, 41],
+      availableSizes: [36],
+      isNew: true
+    },
+    {
+      id: 8,
+      name: "Veloura Pumps",
+      price: 45,
+      image: product5,
+      colors: ["black", "brown", "gray"],
+      sizes: [36, 37, 38, 39, 40, 41],
+      availableSizes: [38, 39],
+      isNew: true
+    }
   ]);
 
   const [filteredProducts, setFilteredProducts] = useState(products);
@@ -111,22 +107,20 @@ function Sandals() {
   const [showAlert, setShowAlert] = useState(false);
 
   useEffect(() => {
-    let sortedProducts = [...products];
-
+    let sorted = [...products];
     if (sortOption === 'price-low-high') {
-      sortedProducts.sort((a, b) => parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', '')));
+      sorted.sort((a, b) => a.price - b.price);
     } else if (sortOption === 'price-high-low') {
-      sortedProducts.sort((a, b) => parseFloat(b.price.replace('$', '')) - parseFloat(a.price.replace('$', '')));
+      sorted.sort((a, b) => b.price - a.price);
     } else if (sortOption === 'best-selling') {
-      sortedProducts.sort((a, b) => (b.bestSeller === true) - (a.bestSeller === true));
+      sorted.sort((a, b) => (b.bestSeller === true) - (a.bestSeller === true));
     }
-
-    setFilteredProducts(sortedProducts);
+    setFilteredProducts(sorted);
   }, [sortOption, products]);
 
   const handleClose = () => setSelectedProduct(null);
-  const handleIncrease = () => setQuantity(quantity + 1);
-  const handleDecrease = () => setQuantity(quantity > 1 ? quantity - 1 : 1);
+  const handleIncrease = () => setQuantity(prev => prev + 1);
+  const handleDecrease = () => setQuantity(prev => (prev > 1 ? prev - 1 : 1));
 
   const getColSize = () => {
     switch (columnCount) {
@@ -145,13 +139,11 @@ function Sandals() {
       return;
     }
 
-    const priceValue = parseFloat(selectedProduct.price.replace('$', ''));
-
     const productToAdd = {
       id: `${selectedProduct.id}-${selectedColor}-${selectedSize}`,
       name: selectedProduct.name,
       image: selectedProduct.image,
-      price: priceValue,
+      price: selectedProduct.price,
       color: selectedColor,
       size: selectedSize,
       quantity,
@@ -168,16 +160,14 @@ function Sandals() {
       </div>
 
       <div className="breadcrumb">
-        <Link to="/" className="breadcrumb-link">
-          <span className="home-word">Home</span>
-        </Link>
+        <Link to="/" className="breadcrumb-link"><span className="home-word">Home</span></Link>
         <span className="breadcrumb-separator">{'>'}</span>
         <span className="breadcrumb-current">Sandals</span>
       </div>
 
       <div className="d-flex justify-content-between align-items-center mb-4 mt-5">
         <Dropdown>
-          <Dropdown.Toggle variant="secondary" id="dropdown-basic" className=' Featured'>
+          <Dropdown.Toggle variant="secondary" className="Featured">
             Featured
           </Dropdown.Toggle>
           <Dropdown.Menu>
@@ -226,7 +216,7 @@ function Sandals() {
               </Card>
               <div className="text-center mt-2">
                 <h5 className="pt-1">{product.name}</h5>
-                <p className="price">{product.price}</p>
+                <p className="price">${product.price}</p>
               </div>
             </div>
           </Col>
@@ -245,7 +235,7 @@ function Sandals() {
               </div>
               <div className="modal_style">
                 <p>Availability: In Stock</p>
-                <p>Price: {selectedProduct.price}</p>
+                <p>Price: ${selectedProduct.price}</p>
 
                 <div className="color-options mb-3">
                   <div className="color-circles-row">
@@ -274,7 +264,7 @@ function Sandals() {
                   })}
                 </div>
 
-                <div className="quantity-container">
+                <div className="quantity-container mb-3">
                   <label>Quantity:</label>
                   <div className="quantity-buttons">
                     <button onClick={handleDecrease}>-</button>
@@ -284,13 +274,8 @@ function Sandals() {
                 </div>
 
                 <div className="total-price mb-3">
-<p>
-                    Total: 
-                    {(
-                      parseFloat(selectedProduct.price.replace("$", "")) * quantity
-                    ).toFixed(2)}
-                     $
-                  </p>                </div>
+                  <p>Total: ${(selectedProduct.price * quantity).toFixed(2)}</p>
+                </div>
 
                 <button className="add-to-cart-button" onClick={handleAddToCart}>
                   Add to Cart
