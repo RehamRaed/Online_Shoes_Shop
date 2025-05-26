@@ -69,6 +69,15 @@ function Header() {
 
             <div className="center-section">
               <ul className={`menu-items ${sideNav ? "active" : ""}`}>
+                {sideNav && (
+                  
+                    <i
+                      className="bi bi-x close-icon"
+                      onClick={() => setSideNav(false)}
+                    ></i>
+                  
+                )}
+
                 {navLinks.map(({ name, to, type }) => (
                   <li key={to}>
                     {type === "scroll" ? (

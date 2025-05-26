@@ -232,6 +232,14 @@
   }}
 
 @media (max-width: 1070px) {
+   @media (max-width: 1320px) {
+    .left-section{
+      padding-left: 30px;
+    }
+    .right-section{
+            padding-right: 30px;
+
+  }}
     .navbar li {
         display: block;
         width: 60%!important;
@@ -243,6 +251,7 @@
       text-align: center;
       border: none;
       z-index: 10000;
+      margin-right: 20px ;
   }
   .menu-items {
       position: fixed;
@@ -260,7 +269,14 @@
       padding-top: 1rem!important;
       transition: transform 0.3s ease-in-out;
   }
-
+ 
+.menu-items .close-icon {
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 999;
+  
+}
     .menu-items.active {
         transform: translateX(250px);
     }
