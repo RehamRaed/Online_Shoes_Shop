@@ -4,7 +4,7 @@ A modern, fully responsive online shoe store built with **React.js**.
 
 ## 🚀 Live Demo  
 
-🔗 [View Website](https://onlineshoesshop.vercel.app/)
+🔗 [View Website](https://online-shoes-shop.vercel.app/)
 
 ## 🚀 Features
 
