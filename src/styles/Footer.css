@@ -151,9 +151,14 @@
     text-align: center !important;
     cursor: pointer;
   }
-     
-
 }
+  .footer-section .contact-info,
+  .footer-section .footer-links,
+  .footer-section .payment-icons,
+  .footer-section .newsletter-form {
+        cursor: pointer;
+  }
+
  
 
   
